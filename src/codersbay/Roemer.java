@@ -23,10 +23,6 @@ public class Roemer {
             number -= 90;
             output = output + ziffern[2] + ziffern[4];
         }
-        if (number >= 80) {
-            number -= 80;
-            output = output + ziffern[2] + ziffern[2] + ziffern[4];
-        }
 
         if (number > 50) {
             number -= 50;
@@ -61,11 +57,6 @@ public class Roemer {
         if(number == 9) {
             number -= 9;
             output = output+ziffern[0]+ziffern[2];
-        }
-
-        if(number == 8){
-            number-= 8;
-            output = output+ziffern[0]+ziffern[0]+ziffern[2];
         }
 
         if (number >= 5) {
