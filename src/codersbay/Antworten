@@ -1,0 +1,65 @@
+Programmauswertung:
+int number = 12;
+System.out.println(number/5); // gibt Ergebnis als ganze Zahl aus( = 2), rundet nicht sondern ignoriert Nachkommastellen
+System.out.println(number/5.0); // gibt Ergebnis mit einer Nackommastelle an( = 2.4)
+number += 7; // addiert 7 zum derzeitigen Wert von number und speichert das Ergebnis als neuen number - Wert
+System.out.println(number); // gibt neuen number Wert aus ( = 19)
+
+
+Datentypen:
+
+int
+double
+char
+float
+long
+boolean
+String
+Integer
+Array
+
+Ja, es gibt Unterschiede. Wie man an der Klein- / Großschreibung schon erkennt, handelt es sich bei int um einen primitiven Datentyp und bei Integer um einen komplexen Datentyp.
+Ein einfacher Unterschied in der Anwendung ist, dass Integer auch den NULL Wert annehmen können.
+Als Wrapper Klasse sind sie flexibler in der Speicherung und Manipulation von Zahlenwerten.
+
+
+
+Scope:
+Der Scope einer Variable ist der Bereich innerhalb eines Codes, in der eine Variable lebt / gültig ist.
+
+Angenommen wir initialisieren und deklarieren eine Variable innerhalb der main Funktion:
+
+ public static void main(String[] args) {
+
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Von welcher Zahl möchtest du wissen ob es eine Primzahl ist?");
+        int number = sc.nextInt();
+
+        // ^^^^ initialisieren der int Variable mit Namen "number" ^^^^
+        //Ab dieser Zeile ist diese Variable für den Rest der Main Funktion geltend!
+
+        if(number == 1){
+            System.out.println("Weißt du eigentlich wie Primzahlen funktionieren?");
+        }
+        else if(number == 2 || number == 3 || number == 5 || number == 7 || number == 11){
+            System.out.println("Definitiv eine Primzahl!");
+        }
+        else if(number%2 == 0 || number%3 == 0 || number%5 == 0 || number%7 == 0 || number%11 == 0){
+            System.out.println("Keine Primzahl!");
+        }
+        else {
+            System.out.println("Definitiv eine Primzahl!");
+        }
+    }
+
+Würden wir z.B. eine Variable innerhalb einer Schleife initialisieren:
+
+Random randy = new Random();
+for(int i = 1, i < 5, i++) {
+int x = 2;
+int y = randy.nextInt(100);
+System.out.Println("x * y = "+x*y);
+}
+
+So Leben der Zähler i, x und y nur innerhalb der Schleife, da sich das Scope auf den Bereich innerhalb der geschwungenen Klammern der for Schleife beschränkt.
